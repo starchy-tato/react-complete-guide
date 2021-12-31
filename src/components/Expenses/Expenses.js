@@ -1,5 +1,7 @@
+import React from "react";
 import "./Expenses.css";
 import ExpenseItem from "./ExpenseItem";
+import Card from "../UI/Card";
 
 // Assignment: Time to Practice: React & Component Basics
 /*Complete the instructions mentioned in the above video.
@@ -10,9 +12,9 @@ In detail:
 You can use this .css file for some styling for your Expenses 
 */
 
-function Expenses(props) {
+const Expenses = (props) => {
   return (
-    <div className="expenses">
+    <Card className="expenses">
       <ExpenseItem
         title={props.expenses[0].title}
         amount={props.expenses[0].amount}
@@ -33,8 +35,8 @@ function Expenses(props) {
         amount={props.expenses[3].amount}
         date={props.expenses[3].date}
       />
-    </div>
+    </Card>
   );
-}
+};
 
 export default Expenses;
